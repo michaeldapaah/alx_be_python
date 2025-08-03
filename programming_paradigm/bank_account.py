@@ -13,9 +13,9 @@ class BankAccount:
         if 0 < amount <= self.account_balance:
             self.account_balance -= amount
             # print(f'Withdrew: {amount}')
+            return True  # main.py prints "Withdrew: $..."
+        return False 
 
-        else:
-            print('Withdrawal amount must be positive and less than or equal to the account balance.')
 
     def display_balance(self):
         print(f'Current Balance: {self.account_balance}')

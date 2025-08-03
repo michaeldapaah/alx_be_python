@@ -19,4 +19,4 @@ class BankAccount:
             print('Withdrawal amount must be positive and less than or equal to the account balance.')
 
     def display_balance(self):
-        print(f'Current account balance: {self.account_balance}')
+        print(f'Current Balance: {self.account_balance}')

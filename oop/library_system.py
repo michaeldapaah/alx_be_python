@@ -7,12 +7,12 @@ class Book:
         return f"Book: {self.title} by {self.author}"
 
 class EBook(Book):
-    def __init__(self, title: str, author: str, filesize: int):
-        self.filesize = filesize
+    def __init__(self, title: str, author: str, file_size: int):
+        self.file_size = file_size
         super().__init__(title, author)
 
     def __str__(self):
-        return f"EBook: {self.title} by {self.author}, File size: {self.filesize}KB"
+        return f"EBook: {self.title} by {self.author}, file_size: {self.file_size}MB"
 
 
 class PrintBook(Book):
@@ -32,5 +32,8 @@ class Library:
 
     
     def list_books(self):
-        for book in self.books:
-            print(book)
+        if not self.books:
+            print("No books in the library.")
+        else:
+            for book in self.books:
+                print(book)
